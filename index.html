@@ -6,11 +6,10 @@
 		var app;
 		
 		$(document).ready(function(){
-			container = document.getElementsByClassName("section-background")[0];
 			app = new PIXI.Application({width: 1673, height: 941});
-			container.appendChild(app.view);
+			document.body.appendChild(app.view);
 			
-			const texture = PIXI.Texture.from('/s/risingsmokeloop.webm');
+			const texture = PIXI.Texture.from('/media/risingsmokeloop.webm');
 			texture.baseTexture.resource.source.muted = true;
 			const videoSprite = new PIXI.Sprite( texture );
 			
