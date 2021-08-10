@@ -1,0 +1,24 @@
+<head>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
+	<script>
+		var container;
+		var app;
+		
+		$(document).ready(function(){
+			container = document.getElementsByClassName("section-background")[0];
+			app = new PIXI.Application({width: 1673, height: 941});
+			container.appendChild(app.view);
+			
+			const texture = PIXI.Texture.from('/s/risingsmokeloop.webm');
+			texture.baseTexture.resource.source.muted = true;
+			const videoSprite = new PIXI.Sprite( texture );
+			
+			app.stage.addChild(videoSprite);
+		});
+	</script>
+	<style>
+	</style>
+</head>
+<body>
+</body>
